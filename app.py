@@ -1,4 +1,4 @@
-[11:59 AM, 5/16/2023] Satyam Roommate: # import all the app dependencies
+# import all the app dependencies
 import pandas as pd
 import numpy as np
 import sklearn
