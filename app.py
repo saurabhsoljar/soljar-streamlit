@@ -1,4 +1,30 @@
-# import all the app dependencies
+[11:59 AM, 5/16/2023] Satyam Roommate: # import all the app dependencies
+import pandas as pd
+import numpy as np
+import sklearn
+import streamlit as st
+import joblib
+import matplotlib
+from IPython import get_ipython
+from PIL import Image
+
+# load the encoder and model object
+model = joblib.load("rta_model_deploy3.joblib")
+encoder = joblib.load("ordinal_encoder2.joblib")
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
+# 1: serious injury, 2: Slight injury, 0: Fatal Injury
+
+st.set_page_config(page_title="Accident Severity Prediction App",
+        page_icon="🚧", layout="wide")
+
+#creating option list for dropdown menu
+options_day = ['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+options_age = ['18-30', '31-50', 'Over 51', 'Unknown', 'Under 18']
+
+# number of vehi…
+[12:31 PM, 5/16/2023] Satyam Roommate: # import all the app dependencies
 import pandas as pd
 import numpy as np
 import sklearn
